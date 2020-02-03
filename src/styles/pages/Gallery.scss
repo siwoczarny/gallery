@@ -1,0 +1,22 @@
+.box {
+    margin: 32px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 4px 12px whitesmoke;
+    width: 224px;
+    height: 224px;
+    text-align: center;
+    p {
+        padding: 8px 0;
+    }
+}
+
+.photo {
+    height: 85%;
+    background: dimgrey;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}

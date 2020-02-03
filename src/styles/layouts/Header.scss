@@ -1,0 +1,37 @@
+h1 {
+    padding: 16px 16px 0;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+nav {
+    float: right;
+    ul {
+        list-style-type: none;
+        padding: 16px 16px 0;
+
+        li {
+            display: inline;
+            padding: 0 16px;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #d1d1d1;
+            transition: .2s;
+        }
+
+        a:hover {
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        a.active {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    }
+}
