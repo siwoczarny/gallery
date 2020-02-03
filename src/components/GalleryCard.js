@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 class GalleryCard extends Component {
     state = {  }
     render() { 
-        return (
+        return ( 
         <>
             <div className="box">
-                <div className="photo">photo</div>
-                <p>Opis</p>
+                <div className="photo"></div>
+                <p>description</p>
             </div>
-        </>  
+        </>
         );
     }
 }

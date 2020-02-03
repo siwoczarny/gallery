@@ -1,37 +1,100 @@
-h1 {
-    padding: 16px 16px 0;
-    color: #ffffff;
-    font-size: 2.5rem;
-    font-weight: 400;
+@import "../variables.scss";
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 16px;
+    color: $color-text-light;
+    
+    &_name a {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: $color-text-light;
+    }
+    &_subtitle {
+        font-weight: 400;
+    }
+    &_hamburger {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .hamburger_line {
+            width: 32px;
+            height: 3px;
+            background-color: $color-text-light;
+            transition: $transition;
+            border-radius: 2px;
+        }
+        .hamburger_top {
+            transform: none;
+            transform-origin: left top;
+            transition: $transition;
+            margin-bottom: 5px;
+            &--open {
+                transform: translateY(3px) rotate(45deg);
+            }
+        }
+        .hamburger_middle {
+            opacity: 1;
+            transform: none;
+            transition: $transition;
+            &--open {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+        }
+        .hamburger_bottom {
+            transform: none;
+            transform: none;
+            transition: $transition;
+            margin-top: 5px;
+            &--open {
+                transform: translateY(-3px) rotate(-45deg);
+            }
+        }
+    }
 }
 
-nav {
-    float: right;
-    ul {
-        list-style-type: none;
-        padding: 16px 16px 0;
-
-        li {
-            display: inline;
-            padding: 0 16px;
-        }
-
+.menu {
+    position: absolute;
+    left: -110vh;
+    width: 100vw;
+    z-index: 98;
+    transition: $transition;
+    &_list {
+        list-style: none;
+        padding: 0 32px;
+        text-align: right;
+    }
+    &_item {
+        padding: 4px;
+        margin: 8px 0;
+        font-weight: 400;
         a {
-            display: inline-block;
             font-size: 1.5rem;
+            color: $color-text-dark;
             text-decoration: none;
-            color: #d1d1d1;
-            transition: .2s;
+            transition: $transition;
+            &:hover {
+                letter-spacing: 2px;
+                color: $color-text-light;
+            }
+            &.active {
+                color: $color-text-light;
+                text-decoration: underline;
+            }
         }
-
-        a:hover {
-            letter-spacing: 2px;
-            color: #ffffff;
-        }
-
-        a.active {
-            color: #ffffff;
-            text-decoration: underline;
-        }
+        
+    }
+    &--open {
+        left: 0;
     }
 }
